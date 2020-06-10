@@ -123,6 +123,14 @@
           }
         }
       }
-    }},
-  "defaultProject": "todo-lists"
+    }
+  },
+  "defaultProject": "todo-lists",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "inlineTemplate": true
+      }
+    }
+  }
 }
