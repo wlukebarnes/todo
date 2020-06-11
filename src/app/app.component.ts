@@ -7,27 +7,10 @@ import { TodoItem } from './interfaces/todo-item';
     <h1>
       Welcome to {{ title }}!
     </h1>
-    <app-input-button-unit></app-input-button-unit>
-    <ul>
-      <li *ngFor="let todoItem of todoList">
-        <app-todo-item [item]="todoItem"></app-todo-item>
-      </li>
-    </ul>
+    <app-list-manager></app-list-manager>
   `,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo-lists';
-  todoList: TodoItem[] = [
-    {title: 'install NodeJS'},
-    {title: 'install Angular CLI'},
-    {title: 'create new app'},
-    {title: 'serve app'},
-    {title: 'develop app'},
-    {title: 'deploy app'},
-  ];
-
-  addItem(title: string) {
-    this.todoList.push({ title });
-  }
+  title = 'my todo list app!';
 }
