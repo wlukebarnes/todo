@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
       the title is: {{ title }}
     </p>
 
-    <input [value]="title">
-    <button>Save</button>
+    <input [value]="title"
+           (keyup.enter)="changeTitle($event.target.value)">
+    <button (click)="changeTitle('button clicked!')">
+      Save
+    </button>
   `,
   styleUrls: ['./input-button-unit.component.scss']
 })
@@ -20,6 +23,10 @@ export class InputButtonUnitComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeTitle(newTitle : string) {
+    this.title = newTitle;
   }
 
 }
